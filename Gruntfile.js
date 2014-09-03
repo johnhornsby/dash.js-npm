@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         cmd: 'grunt --base ' + pathogen.sys('./node_modules/dashjs') + ' --gruntfile ' + pathogen.sys('./node_modules/dashjs/Gruntfile.js') + ' uglify'
       },
       cpSrcBundle: {
-        cmd: 'cp ' + pathogen.sys('./node_modules/dashjs/dash.all.js') + ' ' + pathogen.sys('./dashjs/') + 'index.js'
+        cmd: 'cp ' + pathogen.sys('./node_modules/dashjs/dash.all.js') + ' ' + 'index.js'
       }
     },
   });

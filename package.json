@@ -1,6 +1,6 @@
 {
   "name": "dashjs",
-  "version": "0.0.0",
+  "version": "1.1.1",
   "description": "A CommonJS module for the popular Dash.JS lib - https://github.com/Dash-Industry-Forum/dash.js",
   "main": "index.js",
   "scripts": {
