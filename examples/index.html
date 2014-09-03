@@ -7,21 +7,21 @@
 
 <script type="text/javascript">
 (function (){
-	'use strict';
+  'use strict';
 
-	var videoContainer = document.getElementById('container');
+  var videoContainer = document.getElementById('container');
 	var videoElement = document.createElement('video');
 	videoContainer.appendChild(videoElement);
 
 	MediaPlayer.dependencies.BufferExtensions.DEFAULT_MIN_BUFFER_TIME = 1;
 	var context = new Dash.di.DashContext();
-    var player = new MediaPlayer(context);
+  var player = new MediaPlayer(context);
 
-    player.startup();
-    player.setAutoSwitchQuality(true)
-    player.attachView(videoElement);
-    player.attachSource('http://yt-dash-mse-test.commondatastorage.googleapis.com/media/motion-20120802-manifest.mpd');
-    player.play();
+  player.startup();
+  player.setAutoSwitchQuality(true)
+  player.attachView(videoElement);
+  player.attachSource('http://yt-dash-mse-test.commondatastorage.googleapis.com/media/motion-20120802-manifest.mpd');
+  player.play();
 }());
 </script>
 </body>
