@@ -8,17 +8,17 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    srcPkg: grunt.file.readJSON('./node_modules/dashjs/package.json'),
+    srcPkg: grunt.file.readJSON('./node_modules/dashjs/build/package.json'),
 
     exec: {
       srcDepInstall: {
-        cmd: 'cd ' + pathogen.sys('./node_modules/dashjs') + ' && npm install'
+        cmd: 'cd ' + pathogen.sys('./node_modules/dashjs/build') + ' && npm install'
       },
       srcPkg: {
-        cmd: 'grunt --base ' + pathogen.sys('./node_modules/dashjs') + ' --gruntfile ' + pathogen.sys('./node_modules/dashjs/Gruntfile.js') + ' uglify'
+        cmd: 'grunt --base ' + pathogen.sys('./node_modules/dashjs/build') + ' --gruntfile ' + pathogen.sys('./node_modules/dashjs/build/Gruntfile.js') + ' uglify'
       },
       cpSrcBundle: {
-        cmd: 'cp ' + pathogen.sys('./node_modules/dashjs/dash.all.js') + ' ' + 'index.js'
+        cmd: 'cp ' + pathogen.sys('./node_modules/dashjs/dist/dash.all.js') + ' ' + 'index.js'
       }
     },
   });
